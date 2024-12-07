@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lapts profile GNG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #181818;
+      color: #ffffff;
+      text-align: center;
+    }
+    header {
+      background-color: #101010;
+      padding: 20px;
+      border-bottom: 2px solid #007acc;
+    }
+    h1, h2 {
+      margin: 10px;
+      color: #007acc;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    section {
+      margin: 20px;
+      padding: 20px;
+      background-color: #101010;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .buttons a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #282828;
+      color: #007acc;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .buttons a:hover {
+      background-color: #007acc;
+      color: #ffffff;
+    }
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .skills div {
+      background-color: #282828;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin: 5px;
+      color: #007acc;
+    }
+    .profile-picture {
+      margin-top: 20px;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 3px solid #007acc;
+      box-shadow: 0 0 10px rgba(0, 122, 204, 0.7);
+    }
+    footer {
+      background-color: #101010;
+      padding: 10px;
+      margin-top: 30px;
+      border-top: 2px solid #007acc;
+    }
+    /* Notification style */
+    #notification {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="2561a3ae41734463af25558fe0e7cb70.jpg" alt="Profile Picture" class="profile-picture">
+    <h1>LAPT</h1>
+    <p>📌SLOVAKIA</p>
+  </header>
+
+  <section>
+    <h2> About Me</h2>
+    <p>Just me ig.</p>
+    <div class="buttons">
+      <a href="https://lapttt.com" target="_blank">My Website</a>
+      <a href="mailto:denisdenisovy5@gmail.com">Email Me</a>
+      <a href="https://github.com/lapttt" target="_blank">GitHub Profile</a>
+      <a href="https://roblox.com/users/1425153631/profile" target="_blank">Roblox Profile</a>
+      <a href="https://fortnitetracker.com/profile/all/EXD%20WYA" target="_blank">Fortnite Profile</a>
+      <a href="https://steamcommunity.com/profiles/76561199403815037/" target="_blank">Steam Profile</a>
+
+
+
+      <button onclick="copyToClipboard('adfj', 'Discord copied to clipboard!')">Discord</button>
+      <button onclick="copyToClipboard('asd', 'Alt Discord copied to clipboard!')">Alt Discord</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔧 Technologies</h2>
+    <div class="skills">
+      <div>Lua 5.1</div>
+      <div>C++</div>
+      <div>Python</div>
+      <div>GitHub</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Lapt. All rights reserved.</p>
+  </footer>
+
+
+  <div id="notification">Copied to clipboard!</div>
+
+  <script>
+    function copyToClipboard(text, message) {
+
+      const tempTextArea = document.createElement("textarea");
+      tempTextArea.value = text;
+      document.body.appendChild(tempTextArea);
+      tempTextArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempTextArea);
+
+      // Show notification
+      const notification = document.getElementById("notification");
+      notification.textContent = message;
+      notification.style.display = "block";
+
+      // Hide notification after 2 seconds
+      setTimeout(() => {
+        notification.style.display = "none";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
