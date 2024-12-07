@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lapts profile GNG</title>
+  <title>Lapts Profile GNG</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -81,6 +81,21 @@
       margin-top: 30px;
       border-top: 2px solid #007acc;
     }
+    /* Style for all buttons */
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #282828;
+      color: #007acc;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    button:hover {
+      background-color: #007acc;
+      color: #ffffff;
+    }
     /* Notification style */
     #notification {
       display: none;
@@ -104,17 +119,14 @@
 
   <section>
     <h2> About Me</h2>
-    <p>Just me ig.</p>
+    <p>I'm currently learning <strong>C++</strong> and <strong>Python</strong>, and work with <strong>Lua</strong>.</p>
     <div class="buttons">
       <a href="https://lapttt.com" target="_blank">My Website</a>
       <a href="mailto:denisdenisovy5@gmail.com">Email Me</a>
       <a href="https://github.com/lapttt" target="_blank">GitHub Profile</a>
       <a href="https://roblox.com/users/1425153631/profile" target="_blank">Roblox Profile</a>
-      <a href="https://fortnitetracker.com/profile/all/EXD%20WYA" target="_blank">Fortnite Profile</a>
-      <a href="https://steamcommunity.com/profiles/76561199403815037/" target="_blank">Steam Profile</a>
 
-
-
+      <!-- Copy buttons -->
       <button onclick="copyToClipboard('adfj', 'Discord copied to clipboard!')">Discord</button>
       <button onclick="copyToClipboard('asd', 'Alt Discord copied to clipboard!')">Alt Discord</button>
     </div>
@@ -134,12 +146,12 @@
     <p>© 2024 Lapt. All rights reserved.</p>
   </footer>
 
-
+  <!-- Notification for copying -->
   <div id="notification">Copied to clipboard!</div>
 
   <script>
     function copyToClipboard(text, message) {
-
+      // Create a temporary textarea element to copy the text
       const tempTextArea = document.createElement("textarea");
       tempTextArea.value = text;
       document.body.appendChild(tempTextArea);
